@@ -2,6 +2,7 @@ import producer_script as script
 import konnections as kon
 import pika
 
+# Function to send file names to the queue
 def send_file_names():
     prefix_val_list = script.get_data_from_files()
     for prefix_val in prefix_val_list:
@@ -12,6 +13,7 @@ def send_file_names():
         
         print(f" [x] Sent {prefix_val}")
     
+# Connects to rabbit to send file names
 connection = kon.rabbitmq_connection('rabbitmq')
 channel = connection.channel()
 
