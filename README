@@ -1,0 +1,5 @@
+To run this code using docker please type docker compose up
+
+To change the data sets being read and other important variables please change them within infofile.py
+
+After changes please remove any previous images and then run docker compose up again
